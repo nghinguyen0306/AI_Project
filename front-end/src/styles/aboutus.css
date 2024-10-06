@@ -1,0 +1,81 @@
+/* Font chung cho toàn bộ trang */
+
+  
+  .about-container {
+    text-align: center;
+    padding-top: 30px;
+    padding-inline: 30px;
+    max-width: 1200px;   
+    margin: 0 auto; 
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+  
+    padding: 0;
+    box-sizing: border-box; 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .about-section {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f4f4f9;
+  }
+  
+  .text-box {
+    flex: 1;
+    padding: 20px;
+    text-align: left; 
+  }
+  
+  .image-box {
+    flex: 1;
+  }
+  
+  .image-box img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+  }
+  
+  .vision, .mission, .story {
+    margin-bottom: 40px;
+  }
+  
+  h1, h2 {
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    margin-bottom: 20px;
+    color: #1f1f66; 
+  }
+  
+  h3 {
+    font-size: 1.5rem; 
+    color: #3e3e9f; 
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-size: 1.2rem; 
+    margin: 20px 0;
+  }
+  
+footer .footer-right, footer .footer-left {
+  font-size: 1.2rem;
+}
+
+footer .footer-right h3, footer .footer-left h3 {
+  font-size: 1.2rem; 
+}
+
+footer .footer-right p, footer .footer-left p {
+  font-size: 1.2rem; 
+}
+
+  

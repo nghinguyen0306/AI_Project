@@ -1,0 +1,163 @@
+
+/* Header  */
+.sticky-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, #2d2d9a, #000); 
+  z-index: 1000;
+
+}
+
+.logo {
+  flex: 1; 
+  min-width: 100px;
+  padding-left: 20px;
+  font-size: 1.2rem; 
+  font-weight: 700; 
+  color: #fff; 
+}
+
+.navbar {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 10px; 
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  font-size: 1.2rem;
+}
+
+.navbar a:hover {
+  color: #ddd;
+}
+
+.auth-buttons {
+  display: flex;
+  flex: 1; 
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.auth-buttons a {
+  padding: 5px 8px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.login {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #000;
+}
+
+.login:hover {
+  background-color: #eaeaf3;
+}
+
+.signup {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #000;
+}
+
+.signup:hover {
+  background-color: #eaeaf3;
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+  .sticky-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    gap: 5px;
+  }
+
+  .auth-buttons {
+    margin-top: 10px;
+  }
+
+  .navbar a, .auth-buttons a {
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+}
+
+/* Footer */
+.footer {
+  position:relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #2d2d9a, #000);
+  color: white;
+  padding: 20px 0;
+  z-index: 1000;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: flex-end;
+  
+  font-size: 1rem;
+  width: 100%;    
+}
+
+.footer-content h4 {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer-content a, .footer-content p {
+  color: white;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  display: block;
+}
+
+.footer-content a:hover {
+  color: #ddd;
+}
+
+.footer-bottom {
+  margin-top: 10px;
+  border-top: 1px solid white;
+  padding-top: 10px;
+  text-align: center;
+}
+
+
+.footer-menu, .footer-contact {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-align: left; 
+  margin: 0 50px;
+  
+ 
+  
+}
