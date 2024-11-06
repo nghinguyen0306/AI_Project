@@ -1,0 +1,26 @@
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tab-bar-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex: 500px;
+}
+
+.tab-bar-wrapper ion-tab-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.tab-bar-wrapper ion-tab-button ion-label {
+  font-size: 15px; /* Adjust the font size as desired */
+  font-weight: bold; /* Optional: make the text bold */
+}

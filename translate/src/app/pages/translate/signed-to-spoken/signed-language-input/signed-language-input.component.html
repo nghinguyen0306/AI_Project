@@ -1,0 +1,35 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <!-- Upload button, assuming app-upload handles video or image upload -->
+    <app-upload [isMobile]="true"></app-upload>
+  </ion-buttons>
+
+  <ion-title>
+    <ion-fab-button color="danger">
+      <ion-icon name="ellipse-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-title>
+
+  <ion-buttons slot="end">
+    <ion-button>
+      <ion-icon name="camera-reverse-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content padding>
+  <!-- Text area for sign language input -->
+  <ion-item>
+    <ion-label position="stacked">Enter Sign Language Text</ion-label>
+    <ion-textarea
+      rows="4"
+      placeholder="Type here..."
+      (ionInput)="onInputChange($event)"
+    ></ion-textarea>
+  </ion-item>
+
+  <!-- Button to trigger translation -->
+  <ion-button expand="block" color="primary" (click)="translateSignText()">
+    Translate to Spoken Language
+  </ion-button>
+</ion-content>

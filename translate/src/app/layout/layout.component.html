@@ -1,0 +1,20 @@
+<ion-header [translucent]="false" class="gradient-header">
+  <ion-toolbar class="gradient-toolbar">
+    <div class="header-row">
+      <ion-title>Sign Language Translation</ion-title>
+      <div class="tab-bar-wrapper">
+        <ion-tab-button tab="translate" [routerLink]="['/']">
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="about-us" [routerLink]="['/about-us']">
+          <ion-label>About Us</ion-label>
+        </ion-tab-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <router-outlet></router-outlet>
+</ion-content>

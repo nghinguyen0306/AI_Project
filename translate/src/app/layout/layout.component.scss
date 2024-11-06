@@ -1,0 +1,82 @@
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tab-bar-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex: 400px;
+}
+
+.tab-bar-wrapper ion-tab-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  background: transparent !important;
+  box-shadow: none; // Remove any shadow if present
+
+  // Default color for the tab button
+  --color: #cccccc;
+
+  // Selected color for the tab button
+  --color-selected: #ffffff;
+  
+  &.tab-selected {
+    color: #ffffff !important; // Ensures selected text remains white
+  }
+}
+
+.tab-bar-wrapper ion-tab-button ion-label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+mat-toolbar {
+  justify-content: space-between;
+}
+
+.content {
+  padding: 32px;
+}
+
+.profile-image-toolbar {
+  border-radius: 100%;
+  margin-right: 8px;
+}
+
+ion-header {
+  background: linear-gradient(90deg, #2d2d9a, #000);
+  color: #ffffff;
+
+  .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+
+  ion-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .tab-bar-wrapper {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+// Add background gradient to ion-content
+ion-content {
+  background: linear-gradient(90deg, #2d2d9a, #000); 
+}
+
+// Ensure that the selected tab text remains white
+.tab-bar-wrapper ion-tab-button[aria-selected="true"] ion-label {
+  color: #ffffff !important;
+}

@@ -1,0 +1,36 @@
+<div *ngIf="videoUrl; else poseViewer">
+  <!-- Display the video if videoUrl is available -->
+  <video
+    [src]="safeVideoUrl"
+    autoplay
+    loop
+    muted
+    playsinline
+    height="100%"
+    width="100%"
+    (error)="onVideoError($event)"
+    (click)="playVideoIfPaused($event)">
+  </video>
+
+  <!-- Download button if videoUrl is available -->
+  <div class="actions-row">
+    <ion-button
+      class="circle-icon"
+      fill="clear"
+      shape="round"
+      color="dark"
+      (click)="downloadTranslation()"
+      [attr.aria-label]="'translate.spoken-to-signed.actions.download' | transloco"
+      [matTooltip]="'translate.spoken-to-signed.actions.download' | transloco"
+      [matTooltipPosition]="'above'">
+      <ion-icon name="download-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+  </div>
+</div>
+
+<!-- Display the skeleton pose viewer if videoUrl is not available but pose is available -->
+<ng-template #poseViewer>
+  <div *ngIf="pose$ | async as pose">
+    <app-skeleton-pose-viewer [src]="pose"></app-skeleton-pose-viewer>
+  </div>
+</ng-template>

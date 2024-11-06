@@ -1,0 +1,8 @@
+:root {
+    --ion-background-color: transparent !important; /* Set background to transparent to apply gradient */
+  }
+  
+  .gradient-header, .gradient-toolbar {
+    background: linear-gradient(90deg, #2d2d9a, #000) !important;
+  }
+  

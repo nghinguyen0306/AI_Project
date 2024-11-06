@@ -1,0 +1,31 @@
+<ng-container *ngIf="inputMode$ | async as inputMode">
+  <ng-container [ngSwitch]="inputMode">
+    <ng-container *ngSwitchCase="'upload'">
+      <ng-container *ngIf="videoState$ | async as videoState">
+        <ng-container *ngIf="!videoState?.src">
+          <app-upload></app-upload>
+        </ng-container>
+        <ng-container *ngIf="videoState?.src">
+          <ng-container *ngTemplateOutlet="translationTemplate"></ng-container>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'webcam'">
+      <ng-container *ngTemplateOutlet="translationTemplate"></ng-container>
+    </ng-container>
+  </ng-container>
+</ng-container>
+
+<ng-template #translationTemplate>
+  <div class="interface">
+    <div class="sign-language">
+      <app-video [displayControls]="false" [displayFps]="false"></app-video>
+    </div>
+
+    <app-sign-writing></app-sign-writing>
+
+    <!-- Add the Spoken Language Output Component here -->
+    <app-spoken-language-output></app-spoken-language-output>
+  </div>
+</ng-template>

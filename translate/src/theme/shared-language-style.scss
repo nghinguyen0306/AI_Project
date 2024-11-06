@@ -1,0 +1,23 @@
+// shared-language-style.scss
+mat-tab-group {
+    display: inline-block;
+  
+    // Override the color of the tab labels when selected
+    ::ng-deep .mat-tab-label.mat-tab-label-active {
+      color: #776bff !important;
+      font-weight: bold;
+    }
+  
+    ::ng-deep .mat-ink-bar {
+      background-color: #6b7aff !important;
+    }
+  
+    ::ng-deep .mat-tab-label {
+      color: #cccccc !important;
+    }
+  
+    ::ng-deep .mat-tab-label:hover {
+      color: #6b7aff !important;
+    }
+  }
+  
